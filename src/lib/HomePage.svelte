@@ -17,7 +17,7 @@
     // Fetch data when user is logged in
     const fetchWorkflows = async () => {
         const response = await fetch(
-            "http://localhost:8080/api/v1/workflows/get",
+            `${import.meta.env.vite_backend}/api/v1/workflows/get`,
             {
                 method: "GET",
                 credentials: "include",

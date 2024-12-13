@@ -10,7 +10,7 @@
         resp.ok == true ? isLoggedIn.set(true) : isLoggedIn.set(false);
     };
 
-    fetch("http://localhost:8080/api/v1/example/login", {
+    fetch(`${import.meta.env.vite_backend}/api/v1/login`, {
         method: "POST",
         credentials: "include",
     }).then(responseCallback);
